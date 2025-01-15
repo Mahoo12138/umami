@@ -25,6 +25,16 @@
 
 ---
 
+##⚠️Please note
+
+本仓库基于官方仓库对所有的接口请求都做了转发，也就是做了“前后端分离”形式：
+
++ 首先你需要自部署原版仓库，用作后端；
++ 其次，将后端 API 通过方向代理，暴露到都某个域名（子路径）；
++ 部署本仓库到 vercel，配置环境变量 `API_HOST` 为暴露的 API 端点。
+
+例如，在本地部署为`http://localhost:3001/`，然后反向代理到 `https://api.mahoo12138.cn/umami`，部署到 vercel 后，绑定域名 `umami。mahoo12138.cn`进行访问。
+
 ## 🚀 Getting Started
 
 A detailed getting started guide can be found at [umami.is/docs](https://umami.is/docs/).
